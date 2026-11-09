@@ -171,7 +171,7 @@ export default function Header() {
 
         {/* Right cluster: CTA + burger */}
         <div className="mk-nav-right">
-          <Link className="mk-btn mk-btn-nav" href={hrefFor("#numbers")}>
+          <Link className="mk-btn mk-btn-nav" href="/contact">
             Let&apos;s talk
             <span className="mk-bubble mk-bubble-sm" aria-hidden="true">
               <ArrowIcon />
@@ -228,7 +228,7 @@ export default function Header() {
 
           <Link
             className="mk-btn mk-btn-nav mk-mobile-cta"
-            href={hrefFor("#numbers")}
+            href="/contact"
             onClick={() => setMobileOpen(false)}
           >
             Let&apos;s talk

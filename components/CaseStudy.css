@@ -70,6 +70,63 @@
   z-index: 1;
 }
 
+/* Dellgardo full-viewport editorial hero */
+.mk-cs-dellgardo {
+  padding-top: 0;
+}
+
+.mk-cs-dellgardo .mk-cs-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: calc(100% + 144px);
+  min-height: calc(100svh - 88px);
+  margin: 0 -72px;
+  padding: 26px 72px 56px;
+}
+
+.mk-cs-dellgardo .mk-cs-hero-top {
+  position: absolute;
+  top: 26px;
+  left: 72px;
+  right: 72px;
+  z-index: 2;
+}
+
+.mk-cs-dellgardo .mk-cs-title,
+.mk-cs-dellgardo .mk-cs-collab,
+.mk-cs-dellgardo .mk-cs-chips {
+  position: relative;
+  z-index: 2;
+}
+
+.mk-cs-dellgardo .mk-cs-title {
+  max-width: 1000px;
+  margin-top: 0;
+}
+
+.mk-cs-dellgardo .mk-cs-figure {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  margin: 0;
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.mk-cs-dellgardo .mk-cs-figure::after {
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 4, 8, 0.72), rgba(5, 4, 8, 0.12) 82%),
+    linear-gradient(0deg, rgba(5, 4, 8, 0.88), rgba(5, 4, 8, 0.06) 76%);
+}
+
+.mk-cs-dellgardo .mk-cs-figure-bar {
+  display: none;
+}
+
 /* ================= REVEAL ================= */
 
 .mk-cs-reveal {
@@ -813,6 +870,19 @@
   .mk-cs {
     padding: 20px 40px 96px;
   }
+
+  .mk-cs-dellgardo .mk-cs-hero {
+    width: calc(100% + 80px);
+    min-height: calc(100svh - 84px);
+    margin-inline: -40px;
+    padding-inline: 40px;
+  }
+
+  .mk-cs-dellgardo .mk-cs-hero-top {
+    left: 40px;
+    right: 40px;
+  }
+
   .mk-cs-sec {
     grid-template-columns: 240px minmax(0, 1fr);
     gap: 34px;
@@ -822,6 +892,22 @@
 @media (max-width: 860px) {
   .mk-cs {
     padding: 14px 20px 80px;
+  }
+
+  .mk-cs-dellgardo .mk-cs-hero {
+    width: calc(100% + 40px);
+    margin-inline: -20px;
+    padding: 32px 20px 36px;
+  }
+
+  .mk-cs-dellgardo .mk-cs-hero-top {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .mk-cs-dellgardo .mk-cs-title {
+    font-size: clamp(38px, 9vw, 58px);
   }
 
   .mk-cs-hero-top {

@@ -257,7 +257,13 @@ function Block({
   }
 }
 
-export default function CaseStudy({ data }: { data: CaseStudyData }) {
+export default function CaseStudy({
+  data,
+  className = "",
+}: {
+  data: CaseStudyData;
+  className?: string;
+}) {
   const rootRef = useRef<HTMLDivElement | null>(null);
 
   const idx = CASE_ORDER.indexOf(data.slug as (typeof CASE_ORDER)[number]);
@@ -289,7 +295,7 @@ export default function CaseStudy({ data }: { data: CaseStudyData }) {
   }, []);
 
   return (
-    <article ref={rootRef} className="mk-cs">
+    <article ref={rootRef} className={`mk-cs ${className}`}>
       {/* ---------- ambient background ---------- */}
       <div className="mk-cs-fx" aria-hidden="true">
         <div className="mk-cs-grid-bg" />

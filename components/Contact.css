@@ -1,0 +1,490 @@
+/* ------------------------------------------------------------------ */
+/*  Contact — mk-ct- prefix. Purple theme on --mk-bg, glass info       */
+/*  cards + glass form panel, gradient submit pill, reveal-on-scroll.  */
+/* ------------------------------------------------------------------ */
+
+.mk-ct {
+  position: relative;
+  overflow: clip;
+  padding: 150px 72px 130px;
+  background: var(--mk-bg, #050408);
+  min-height: calc(100vh - 88px);
+}
+
+/* ---------- ambient fx ---------- */
+
+.mk-ct-fx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.mk-ct-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+}
+
+.mk-ct-glow-a {
+  top: -220px;
+  left: -160px;
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.32) 0%, transparent 65%);
+}
+
+.mk-ct-glow-b {
+  bottom: -260px;
+  right: -180px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(217, 70, 239, 0.2) 0%, transparent 65%);
+}
+
+.mk-ct-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 20%, #000 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 20%, #000 0%, transparent 75%);
+}
+
+.mk-ct-inner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ---------- layout ---------- */
+
+.mk-ct-cols {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 72px;
+  align-items: start;
+}
+
+/* ---------- intro / heading ---------- */
+
+.mk-ct-eyebrow {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mk-lavender);
+  margin: 0 0 26px;
+}
+
+.mk-ct-title {
+  margin: 0;
+  font-family: var(--font-inter-tight), var(--font-inter), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--mk-ink);
+}
+
+.mk-ct-title em {
+  display: block;
+  font-family: var(--font-instrument), Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  background: linear-gradient(100deg, #a78bfa 0%, #d946ef 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-right: 0.06em;
+}
+
+.mk-ct-lede {
+  margin: 28px 0 0;
+  max-width: 520px;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--mk-body);
+}
+
+/* ---------- info cards ---------- */
+
+.mk-ct-cards {
+  list-style: none;
+  margin: 44px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mk-ct-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "value label"
+    "desc  desc";
+  column-gap: 14px;
+  row-gap: 6px;
+  align-items: baseline;
+  padding: 24px 26px;
+  border-radius: 20px;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.055) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-decoration: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease, box-shadow 0.35s ease;
+}
+
+a.mk-ct-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 92, 246, 0.45);
+  box-shadow: 0 18px 44px rgba(139, 92, 246, 0.16);
+}
+
+.mk-ct-card-value {
+  grid-area: value;
+  font-family: var(--font-inter-tight), var(--font-inter), sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.015em;
+  color: var(--mk-ink);
+}
+
+.mk-ct-card-label {
+  grid-area: label;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(196, 181, 253, 0.75);
+}
+
+.mk-ct-card-desc {
+  grid-area: desc;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--mk-body);
+}
+
+/* ---------- form panel ---------- */
+
+.mk-ct-panel {
+  border-radius: 26px;
+  padding: 40px 38px 34px;
+  background: linear-gradient(
+    170deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.025) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.mk-ct-form-head {
+  margin: 0 0 24px;
+  font-family: var(--font-inter-tight), var(--font-inter), sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  color: var(--mk-ink);
+}
+
+.mk-ct-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.mk-ct-field {
+  margin-bottom: 16px;
+}
+
+.mk-ct-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #cfcbdd;
+}
+
+.mk-ct-field input,
+.mk-ct-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 15px;
+  color: var(--mk-ink);
+  outline: none;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mk-ct-field textarea {
+  resize: vertical;
+  min-height: 128px;
+  line-height: 1.55;
+}
+
+.mk-ct-field input::placeholder,
+.mk-ct-field textarea::placeholder {
+  color: rgba(166, 163, 178, 0.55);
+}
+
+.mk-ct-field input:focus,
+.mk-ct-field textarea:focus {
+  border-color: rgba(139, 92, 246, 0.75);
+  background: rgba(139, 92, 246, 0.07);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.16);
+}
+
+.mk-ct-field input.is-bad,
+.mk-ct-field textarea.is-bad {
+  border-color: rgba(251, 113, 133, 0.65);
+}
+
+.mk-ct-err {
+  margin: 7px 0 0;
+  font-size: 12.5px;
+  color: #fda4af;
+}
+
+/* ---------- submit ---------- */
+
+.mk-ct-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 10px;
+  padding: 6px 7px 6px 28px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background: linear-gradient(120deg, #7c3aed 0%, #a855f7 55%, #d946ef 100%);
+  color: #ffffff;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 15.5px;
+  font-weight: 600;
+  box-shadow: 0 16px 40px rgba(139, 92, 246, 0.4);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.2s ease;
+}
+
+.mk-ct-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 50px rgba(168, 85, 247, 0.55);
+}
+
+.mk-ct-submit:disabled {
+  opacity: 0.75;
+  cursor: default;
+  transform: none;
+}
+
+.mk-ct-submit-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #7c3aed;
+}
+
+.mk-ct-submit-bubble svg {
+  width: 15px;
+  height: 15px;
+}
+
+.mk-ct-spin {
+  animation: mk-ct-rotate 0.8s linear infinite;
+}
+
+@keyframes mk-ct-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mk-ct-note {
+  margin: 18px 0 0;
+  font-family: var(--font-space-mono), monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(166, 163, 178, 0.7);
+}
+
+/* ---------- success state ---------- */
+
+.mk-ct-done {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.mk-ct-done-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: linear-gradient(120deg, #7c3aed 0%, #a855f7 55%, #d946ef 100%);
+  box-shadow: 0 16px 44px rgba(139, 92, 246, 0.45);
+}
+
+.mk-ct-done-badge svg {
+  width: 26px;
+  height: 26px;
+}
+
+.mk-ct-done-title {
+  margin: 26px 0 0;
+  font-family: var(--font-inter-tight), var(--font-inter), sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: -0.02em;
+  color: var(--mk-ink);
+}
+
+.mk-ct-done-title em {
+  font-style: normal;
+  color: #d946ef;
+}
+
+.mk-ct-done-text {
+  margin: 14px 0 0;
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--mk-body);
+}
+
+.mk-ct-again {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 0 24px;
+  height: 50px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f0eef6;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.mk-ct-again:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.mk-ct-again svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ---------- reveal ---------- */
+
+.mk-ct-reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.22, 0.7, 0.25, 1);
+}
+
+.mk-ct-reveal.mk-ct-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 1080px) {
+  .mk-ct {
+    padding: 120px 48px 100px;
+  }
+
+  .mk-ct-cols {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .mk-ct-cards {
+    margin-top: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mk-ct {
+    padding: 104px 20px 84px;
+  }
+
+  .mk-ct-title {
+    font-size: clamp(34px, 9vw, 44px);
+  }
+
+  .mk-ct-lede {
+    font-size: 16.5px;
+  }
+
+  .mk-ct-panel {
+    padding: 28px 20px 26px;
+  }
+
+  .mk-ct-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .mk-ct-card {
+    padding: 20px 18px;
+    grid-template-areas:
+      "value"
+      "label"
+      "desc";
+  }
+
+  .mk-ct-done {
+    min-height: 380px;
+  }
+}
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .mk-ct-reveal,
+  .mk-ct-panel {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .mk-ct-spin {
+    animation: none;
+  }
+}

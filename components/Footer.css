@@ -8,7 +8,7 @@
 .mk-footer {
   position: relative;
   overflow: hidden;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(180deg, #0b0816 0%, #050408 100%);
 }

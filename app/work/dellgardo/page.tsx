@@ -11,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function DellgardoCasePage() {
-  return <CaseStudy data={data} />;
+  return <CaseStudy data={data} className="mk-cs-dellgardo" />;
 }
