@@ -66,18 +66,18 @@ export default function Hero() {
       </div>
 
       {/* ---------- Content ---------- */}
-      <div className="mk-hero-inner">
-        <div className="mk-hero-left">
-          <div className="mk-badge">
+      <div className="mk-hero-inner mt-20 xl:mt-40">
+        <div className="mk-hero-left w-full flex flex-col justify-center items-center">
+          {/* <div className="mk-badge">
             <span className="mk-badge-dot">
               <span />
             </span>
             Taking on new startup partners this quarter
-          </div>
+          </div> */}
 
           <h1 className="mk-title">
             Your <em>Go-To</em>
-            <br />
+            {/* <br /> */}
             <span className="mk-ul-wrap">
               Marketer
               <svg
@@ -109,15 +109,15 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mk-lede">
+          {/* <p className="mk-lede text-center">
             Marketics is a marketing studio built to work closely with
             startups and growing brands — clarifying positioning, sharpening
             the message, and turning it into content and campaigns that land.
-          </p>
+          </p> */}
 
           <div className="mk-cta-row">
             <a className="mk-btn mk-btn-hero" href="#">
-              Start a project
+              Let&apos;s talk
               <span className="mk-bubble mk-bubble-lg" aria-hidden="true">
                 <svg
                   className="mk-arrow"
@@ -173,7 +173,7 @@ export default function Hero() {
         </div>
 
         {/* ---------- Founder photo + floating cards ---------- */}
-        <div className="mk-hero-right">
+        {/* <div className="mk-hero-right">
           <figure className="mk-photo">
             <Image
               src="/images/founder.jpg"
@@ -224,7 +224,7 @@ export default function Hero() {
               </svg>
             </button>
           </figure>
-        </div>
+        </div> */}
       </div>
     </section>
   );

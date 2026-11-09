@@ -173,12 +173,12 @@ export default function Research() {
               meets the <em>launch.</em>
             </h2>
             <p className="mk-rs-body mk-rs-reveal" style={{ transitionDelay: "160ms" }}>
-              Fun fact — I&rsquo;m also pursuing a PhD focused on AI in
+              Fun fact, I&rsquo;m also pursuing a PhD focused on AI in
               marketing. That means your strategy is informed by what the
               research actually says, not just what&rsquo;s trending on
               LinkedIn this week.
             </p>
-            <a
+            {/* <a
               className="mk-rs-link mk-rs-reveal"
               href="#contact"
               style={{ transitionDelay: "240ms" }}
@@ -193,7 +193,7 @@ export default function Research() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </a> */}
           </div>
 
           {/* ---------- right: evidence cards ---------- */}
@@ -205,7 +205,7 @@ export default function Research() {
                 style={{ transitionDelay: `${140 + i * 130}ms` }}
               >
                 <div className="mk-rs-card-top">
-                  <span className="mk-rs-icon">{c.icon}</span>
+                  <span className="mk-rs-icon ">{c.icon}</span>
                   <span className="mk-rs-chip">{c.tag}</span>
                 </div>
                 <h3 className="mk-rs-card-title">{c.title}</h3>

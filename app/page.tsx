@@ -14,7 +14,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <Research />
-      <Engagements />
+      {/* <Engagements /> */}
       <Numbers />
     </>
   );

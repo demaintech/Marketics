@@ -244,7 +244,7 @@ export default function About() {
               process.
             </p>
             <p>
-              Fun fact — I’m also pursuing a PhD focused on AI in marketing,
+              Fun fact, I’m also pursuing a PhD focused on AI in marketing,
               bringing academic research into real-world work.
             </p>
           </div>

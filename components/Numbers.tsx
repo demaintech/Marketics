@@ -115,7 +115,7 @@ export default function Numbers() {
       <div className="mk-nm-inner">
         {/* ---------- header ---------- */}
         <header className="mk-nm-head mk-nm-reveal">
-          <p className="mk-nm-eyebrow">( 06 ) — Numbers</p>
+          <p className="mk-nm-eyebrow">( 05 ) — Numbers</p>
           <h2 className="mk-nm-title">
             Numbers I am <em>willing to defend.</em>
           </h2>

@@ -125,7 +125,7 @@
   margin-top: 4px;
 }
 
-.mk-ft-col a {
+.mk-ft-col ul a {
   display: inline-block;
   padding: 5px 0;
   font-family: var(--font-inter), system-ui, sans-serif;
@@ -135,7 +135,7 @@
   transition: color 0.22s ease, transform 0.22s ease;
 }
 
-.mk-ft-col a:hover {
+.mk-ft-col ul a:hover {
   color: #ffffff;
   transform: translateX(3px);
 }

@@ -218,15 +218,14 @@
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1420px;
-  margin: 0 auto;
+  align-items: center;
+  justify-content:center;
+  /* margin: 0 auto; */
   padding: 54px 118px 60px 105px;
 }
 
 .mk-hero-left {
-  max-width: 690px;
+  /* max-width: 690px; */
 }
 
 /* ================= BADGE ================= */
@@ -277,6 +276,7 @@
   font-weight: 600;
   letter-spacing: -0.031em;
   color: #f4f3f5;
+  text-align: center;
   text-wrap: balance;
 }
 
@@ -313,6 +313,7 @@
   font-size: 19px;
   line-height: 1.56;
   color: #a6a3b2;
+
 }
 
 /* ================= CTA BUTTONS ================= */
@@ -321,6 +322,7 @@
   margin-top: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
 }

@@ -65,7 +65,7 @@ const COLUMNS = [
     head: "More",
     links: [
       { label: "Research", href: "#research" },
-      { label: "Engagements", href: "#engagements" },
+      // { label: "Engagements", href: "#engagements" },
       { label: "Numbers", href: "#numbers" },
     ],
   },
@@ -125,7 +125,7 @@ export default function Footer() {
             </a>
             <p className="mk-ft-blurb">
               A marketing studio for startups and growing brands. Strategy,
-              message, content and campaigns — with one point of contact.
+              message, content and campaigns, with one point of contact.
             </p>
           </div>
 

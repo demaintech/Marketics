@@ -11,7 +11,7 @@ import { CASE_LIST } from "@/content/cases";
 const NAV_LINKS = [
   { label: "About", hash: "#about" },
   { label: "Services", hash: "#services" },
-  { label: "Process", hash: "#engagements" },
+  // { label: "Process", hash: "#engagements" },
   { label: "Research", hash: "#research" },
 ];
 

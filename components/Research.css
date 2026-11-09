@@ -281,8 +281,9 @@
   height: 48px;
   border-radius: 13px;
   color: #ffffff;
-  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 55%, #d946ef 100%);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+
+  /* background: linear-gradient(135deg, #7c3aed 0%, #a855f7 55%, #d946ef 100%); */
+  /* box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45); */
 }
 
 .mk-rs-icon svg {
