@@ -65,7 +65,7 @@ const COLUMNS = [
     head: "More",
     links: [
       { label: "Research", href: "#research" },
-      { label: "Engagements", href: "#engagements" },
+      // { label: "Engagements", href: "#engagements" },
       { label: "Numbers", href: "#numbers" },
     ],
   },

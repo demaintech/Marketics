@@ -139,9 +139,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* keep anchored sections clear of the floating pill header */
+/* keep anchored sections clear of the fixed pill header */
 section[id] {
-  scroll-margin-top: 28px;
+  scroll-margin-top: 108px;
 }
 
 .mk-page {

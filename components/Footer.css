@@ -136,23 +136,32 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 42px;
   width: 42px;
   height: 42px;
+  padding: 0;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(255, 255, 255, 0.03);
   color: #cfcbd9;
+  line-height: 0;
   transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease,
     box-shadow 0.25s ease, transform 0.2s ease;
 }
 
 .mk-ft-soc svg {
+  flex: none;
   width: 18px;
   height: 18px;
   display: block;
 }
 
-.mk-ft-soc:hover {
+.mk-ft-col a.mk-ft-soc {
+  display: inline-flex;
+  padding: 0;
+}
+
+.mk-ft-col a.mk-ft-soc:hover {
   background: linear-gradient(135deg, #7c3aed 0%, #a855f7 55%, #d946ef 100%);
   border-color: transparent;
   color: #ffffff;
