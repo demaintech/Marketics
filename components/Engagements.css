@@ -1,0 +1,334 @@
+/* ============================================================
+   Engagements — "How founders work with me."
+   ( 05 ) header + Find-your-fit pill → 3 photo cards with
+   duration chips (Positioning Sprint / Launch Campaign /
+   Fractional Partner). Purple dark theme.
+   ============================================================ */
+
+.mk-engagements {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0 40px;
+}
+
+/* ================= AMBIENT BACKGROUND ================= */
+
+.mk-en-fx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mk-en-glow {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+}
+
+.mk-en-glow-a {
+  top: -200px;
+  left: -180px;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(
+    closest-side,
+    rgba(109, 40, 217, 0.32) 0%,
+    rgba(109, 40, 217, 0) 72%
+  );
+  filter: blur(70px);
+}
+
+.mk-en-glow-b {
+  bottom: -260px;
+  right: -200px;
+  width: 680px;
+  height: 620px;
+  background: radial-gradient(
+    closest-side,
+    rgba(192, 38, 211, 0.18) 0%,
+    rgba(192, 38, 211, 0) 70%
+  );
+  filter: blur(80px);
+}
+
+/* ================= LAYOUT ================= */
+
+.mk-en-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ================= HEADER ================= */
+
+.mk-en-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+.mk-en-eyebrow {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mk-lavender);
+  margin: 0 0 26px;
+}
+
+.mk-en-title {
+  margin: 0;
+  font-family: var(--font-inter-tight), var(--font-inter), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(40px, 4.8vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--mk-ink);
+}
+
+.mk-en-title em {
+  font-family: var(--font-instrument), Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  background: linear-gradient(100deg, #a78bfa 0%, #d946ef 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-right: 0.06em;
+}
+
+/* Find your fit pill */
+.mk-en-fit {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex: none;
+  margin-bottom: 8px;
+  padding: 15px 27px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.03);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--mk-ink);
+  text-decoration: none;
+  transition: border-color 0.25s ease, background 0.25s ease,
+    box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.mk-en-fit svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mk-en-fit:hover {
+  border-color: rgba(196, 181, 253, 0.6);
+  background: rgba(139, 92, 246, 0.14);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+.mk-en-fit:hover svg {
+  transform: translateX(4px);
+}
+
+/* ================= CARDS ================= */
+
+.mk-en-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.mk-en-card {
+  border-radius: 22px;
+  background: linear-gradient(
+    170deg,
+    rgba(255, 255, 255, 0.045) 0%,
+    rgba(255, 255, 255, 0.015) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease, box-shadow 0.35s ease;
+}
+
+.mk-en-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(196, 181, 253, 0.45);
+  box-shadow: 0 24px 52px rgba(7, 4, 16, 0.55),
+    0 0 34px rgba(139, 92, 246, 0.2);
+}
+
+/* photo */
+.mk-en-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.mk-en-img {
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
+  filter: saturate(0.82) contrast(1.02);
+}
+
+.mk-en-card:hover .mk-en-img {
+  transform: scale(1.06);
+  filter: saturate(1.05) contrast(1.04);
+}
+
+/* purple wash so the photo sits in the palette */
+.mk-en-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 7, 18, 0.55) 0%,
+    rgba(76, 29, 149, 0.12) 45%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* duration chip — solid so it fully covers the baked-in chip in the photo */
+.mk-en-dur {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #151022;
+  border: 1px solid rgba(196, 181, 253, 0.45);
+  font-family: var(--font-space-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: #e9ddff;
+  box-shadow: 0 6px 18px rgba(5, 3, 12, 0.45);
+}
+
+/* body */
+.mk-en-body {
+  padding: 26px 26px 30px;
+}
+
+.mk-en-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.mk-en-card-title {
+  margin: 0;
+  font-family: var(--font-inter-tight), var(--font-inter), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 22.5px;
+  letter-spacing: -0.015em;
+  color: var(--mk-ink);
+  transition: color 0.3s ease;
+}
+
+.mk-en-card:hover .mk-en-card-title {
+  color: #d8ccff;
+}
+
+.mk-en-num {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: rgba(196, 181, 253, 0.55);
+}
+
+.mk-en-desc {
+  margin: 0;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--mk-body);
+}
+
+/* ================= REVEAL ================= */
+
+.mk-en-reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.22, 0.7, 0.25, 1);
+}
+
+.mk-en-reveal.mk-en-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .mk-en-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mk-en-card:last-child {
+    grid-column: 1 / -1;
+  }
+  .mk-en-card:last-child .mk-en-media {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+@media (max-width: 980px) {
+  .mk-engagements {
+    padding: 110px 0 30px;
+  }
+  .mk-en-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 46px;
+  }
+  .mk-en-fit {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .mk-en-inner {
+    padding: 0 20px;
+  }
+  .mk-en-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .mk-en-card:last-child {
+    grid-column: auto;
+  }
+  .mk-en-card:last-child .mk-en-media {
+    aspect-ratio: 4 / 3;
+  }
+  .mk-en-body {
+    padding: 22px 22px 26px;
+  }
+}
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .mk-en-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .mk-en-img {
+    transition: none;
+  }
+}
