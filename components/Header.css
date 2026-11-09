@@ -5,8 +5,7 @@
 .mk-header {
   padding: 20px 72px 0;
   /* keep the nav (and its dropdown panel) above hero/section content */
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
 }
 
@@ -33,29 +32,15 @@
   color: #ffffff;
 }
 
-.mk-brand-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 55%, #d946ef 100%);
-  box-shadow: 0 0 18px rgba(139, 92, 246, 0.55);
-  font-family: var(--font-instrument), Georgia, serif;
-  font-style: italic;
-  font-size: 23px;
-  line-height: 1;
-  padding-bottom: 4px;
-  color: #ffffff;
+.mk-brand-logo {
+  display: block;
+  height: 28px;
+  width: auto;
+  transition: opacity 0.2s ease;
 }
 
-.mk-brand-name {
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: 17.5px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+.mk-brand:hover .mk-brand-logo {
+  opacity: 0.85;
 }
 
 /* Links */
@@ -330,6 +315,7 @@
 @media (max-width: 980px) {
   .mk-header {
     padding: 16px 20px 0;
+    position: relative;
   }
 
   /* keep the pill (with the burger button) clickable above the overlay */

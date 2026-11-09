@@ -66,29 +66,15 @@
   color: #ffffff;
 }
 
-.mk-ft-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 55%, #d946ef 100%);
-  box-shadow: 0 0 18px rgba(139, 92, 246, 0.55);
-  font-family: var(--font-instrument), Georgia, serif;
-  font-style: italic;
-  font-size: 23px;
-  line-height: 1;
-  padding-bottom: 4px;
-  color: #ffffff;
+.mk-ft-logo {
+  display: block;
+  height: 26px;
+  width: auto;
+  transition: opacity 0.2s ease;
 }
 
-.mk-ft-brandname {
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: 17.5px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+.mk-ft-brandrow:hover .mk-ft-logo {
+  opacity: 0.85;
 }
 
 .mk-ft-blurb {
@@ -125,7 +111,7 @@
   margin-top: 4px;
 }
 
-.mk-ft-col ul a {
+.mk-ft-col a {
   display: inline-block;
   padding: 5px 0;
   font-family: var(--font-inter), system-ui, sans-serif;
@@ -135,7 +121,7 @@
   transition: color 0.22s ease, transform 0.22s ease;
 }
 
-.mk-ft-col ul a:hover {
+.mk-ft-col a:hover {
   color: #ffffff;
   transform: translateX(3px);
 }

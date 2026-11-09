@@ -11,7 +11,7 @@ import { CASE_LIST } from "@/content/cases";
 const NAV_LINKS = [
   { label: "About", hash: "#about" },
   { label: "Services", hash: "#services" },
-  // { label: "Process", hash: "#engagements" },
+  { label: "Process", hash: "#engagements" },
   { label: "Research", hash: "#research" },
 ];
 
@@ -98,12 +98,13 @@ export default function Header() {
   return (
     <header className="mk-header">
       <nav className="mk-nav" aria-label="Main">
-        {/* Brand */}
+        {/* Brand — extracted from the original site (MARKETICS.BIZ wordmark) */}
         <Link className="mk-brand" href="/" aria-label="Marketics home">
-          <span className="mk-brand-mark" aria-hidden="true">
-            m
-          </span>
-          <span className="mk-brand-name">Marketics</span>
+          <img
+            className="mk-brand-logo"
+            src="/images/logo-marketics.svg"
+            alt="Marketics.biz"
+          />
         </Link>
 
         {/* Center links */}
