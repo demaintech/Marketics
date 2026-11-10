@@ -34,6 +34,10 @@ Open [http://localhost:3000](http://localhost:3000) to view the site. The develo
 
 No environment variables are required for local development.
 
+For production link previews, set `NEXT_PUBLIC_SITE_URL` to the canonical
+website origin (for example, `https://marketics.biz`). The home page uses a
+generated 1200 × 630 Open Graph image that is also used for Twitter/X cards.
+
 ## Available scripts
 
 | Command | Description |

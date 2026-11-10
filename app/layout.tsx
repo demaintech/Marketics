@@ -45,9 +45,34 @@ const spaceMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://marketics.biz",
+  ),
   title: "Marketics | Your Go-To Marketer",
   description:
     "Marketics is a marketing studio built to work closely with startups and growing brands — clarifying positioning, sharpening the message, and turning it into content and campaigns that land.",
+  openGraph: {
+    title: "Marketics | Your Go-To Marketer",
+    description:
+      "A marketing studio helping startups and growing brands clarify their positioning, sharpen their message, and create campaigns that land.",
+    siteName: "Marketics",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Marketics — Your Go-To Marketer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marketics | Your Go-To Marketer",
+    description:
+      "A marketing studio helping startups and growing brands clarify their positioning, sharpen their message, and create campaigns that land.",
+    images: ["/opengraph-image"],
+  },
   /* favicon comes from src/app/icon.png (Next.js file convention),
      extracted from the original marketics.biz site */
 };
