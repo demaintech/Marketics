@@ -153,7 +153,7 @@ export default function Numbers() {
           <h3 className="mk-nm-cta-title">
             Let&rsquo;s make marketing simpler, <em>together.</em>
           </h3>
-          <a className="mk-nm-btn" href="#contact">
+          <a className="mk-nm-btn" href="/contact">
             <span>Let&rsquo;s talk</span>
             <span className="mk-nm-btn-arrow" aria-hidden="true">
               <svg viewBox="0 0 16 16" fill="none">

@@ -172,9 +172,9 @@ export default function Header() {
 
         {/* Right cluster: CTA + burger */}
         <div className="mk-nav-right">
-          <Link className="mk-btn mk-btn-nav" href="/contact">
+          <Link className="mk-btn2 mk-btn-nav gap-1 hidden md:flex  " href="/contact">
             Let&apos;s talk
-            <span className="mk-bubble mk-bubble-sm" aria-hidden="true">
+            <span className="mk-bubble mk-bubble-s p-2 md:p-3 " aria-hidden="true">
               <ArrowIcon />
             </span>
           </Link>

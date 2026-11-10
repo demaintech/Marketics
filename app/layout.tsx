@@ -45,7 +45,7 @@ const spaceMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Marketics — Your Go-To Marketer",
+  title: "Marketics | Your Go-To Marketer",
   description:
     "Marketics is a marketing studio built to work closely with startups and growing brands — clarifying positioning, sharpening the message, and turning it into content and campaigns that land.",
   /* favicon comes from src/app/icon.png (Next.js file convention),

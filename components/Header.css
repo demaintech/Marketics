@@ -496,6 +496,19 @@
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
+.mk-btn2 {
+  /* display: inline-flex; */
+  align-items: center;
+  gap: 13px;
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
 .mk-btn:hover {
   transform: translateY(-1px);
 }

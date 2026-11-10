@@ -10,23 +10,23 @@ import "./Contact.css";
 /*  marked spot to a real endpoint (API route / Formspree) when ready. */
 /* ------------------------------------------------------------------ */
 
-const INFO = [
+const INFO: { value: string; label: string; desc: string; href?: string }[] = [
   {
     value: "2 business days",
     label: "reply time",
-    desc: "Every message is read and answered personally — no bots, no gatekeepers.",
+    desc: "Every message is read and answered personally, no bots, no gatekeepers.",
   },
-  {
-    value: "30 minutes, free",
-    label: "intro call",
-    desc: "Prefer talking? Ask for a call in your message and I’ll send over a few times.",
-  },
-  {
-    value: "hello@marketics.biz",
-    label: "email",
-    desc: "Happy to just write? Email directly — it lands in the same inbox as the form.",
-    href: "mailto:hello@marketics.biz",
-  },
+  // {
+  //   value: "30 minutes, free",
+  //   label: "intro call",
+  //   desc: "Prefer talking? Ask for a call in your message and I’ll send over a few times.",
+  // },
+  // {
+  //   value: "hello@marketics.biz",
+  //   label: "email",
+  //   desc: "Happy to just write? Email directly — it lands in the same inbox as the form.",
+  //   href: "mailto:hello@marketics.biz",
+  // },
 ];
 
 type Status = "idle" | "sending" | "sent";
@@ -113,17 +113,17 @@ export default function Contact() {
         <div className="mk-ct-cols">
           {/* ============ left: heading + info cards ============ */}
           <div className="mk-ct-intro">
-            <p className="mk-ct-eyebrow mk-ct-reveal">( 07 ) — Contact</p>
+            <p className="mk-ct-eyebrow mk-ct-reveal">( 06 ) — Contact</p>
 
             <h1 className="mk-ct-title mk-ct-reveal" style={{ transitionDelay: "60ms" }}>
               Let&rsquo;s talk. <em>Here to help.</em>
             </h1>
 
-            <p className="mk-ct-lede mk-ct-reveal" style={{ transitionDelay: "120ms" }}>
+            {/* <p className="mk-ct-lede mk-ct-reveal" style={{ transitionDelay: "120ms" }}>
               Tell me where your brand is now and where you want it to go —
               I&rsquo;ll come back with honest, practical next steps. One point
               of contact, from first message to final deliverable.
-            </p>
+            </p> */}
 
             <ul className="mk-ct-cards">
               {INFO.map((c, i) => {
@@ -171,7 +171,7 @@ export default function Contact() {
                   Message sent<em>.</em>
                 </h2>
                 <p className="mk-ct-done-text">
-                  Thanks{values.firstName ? `, ${values.firstName.split(" ")[0]}` : ""} — I&rsquo;ll get
+                  Thanks{values.firstName ? `, ${values.firstName.split(" ")[0]}` : ""}. I&rsquo;ll get
                   back to you within 2 business days. Talk soon.
                 </p>
                 <button type="button" className="mk-ct-again" onClick={reset}>
@@ -275,7 +275,7 @@ export default function Contact() {
                   </span>
                 </button>
 
-                <p className="mk-ct-note">No newsletters. No spam. Just a reply.</p>
+                {/* <p className="mk-ct-note">No newsletters. No spam. Just a reply.</p> */}
               </form>
             )}
           </div>

@@ -116,7 +116,7 @@ export default function Hero() {
           </p> */}
 
           <div className="mk-cta-row">
-            <a className="mk-btn mk-btn-hero" href="#">
+            <a className="mk-btn mk-btn-hero" href="/contact">
               Let&apos;s talk
               <span className="mk-bubble mk-bubble-lg" aria-hidden="true">
                 <svg
@@ -135,7 +135,7 @@ export default function Hero() {
                 </svg>
               </span>
             </a>
-            <a className="mk-btn-ghost" href="#">
+            <a className="mk-btn-ghost" href="#services">
               Explore services
             </a>
           </div>

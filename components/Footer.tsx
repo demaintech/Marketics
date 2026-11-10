@@ -14,7 +14,7 @@ import "./Footer.css";
 const SOCIALS = [
   {
     name: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/company/marketics-biz",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
@@ -23,7 +23,7 @@ const SOCIALS = [
   },
   {
     name: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/marketics.biz/",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect
@@ -42,7 +42,7 @@ const SOCIALS = [
   },
   {
     name: "Facebook",
-    href: "#",
+    href: "https://web.facebook.com/marketics.biz",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M13.5 21.5v-8.24h2.77l.42-3.22H13.5V8c0-.93.26-1.57 1.6-1.57h1.7V3.54c-.3-.04-1.31-.13-2.49-.13-2.46 0-4.14 1.5-4.14 4.26v2.37H7.4v3.22h2.77v8.24h3.33z" />
@@ -126,7 +126,7 @@ export default function Footer() {
             </a>
             <p className="mk-ft-blurb">
               A marketing studio for startups and growing brands. Strategy,
-              message, content and campaigns — with one point of contact.
+              message, content and campaigns, with one point of contact.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ export default function Footer() {
                 <ul>
                   {col.links.map((l) => (
                     <li key={l.label}>
-                      <a href={hrefFor(l.href)}>{l.label}</a>
+                      <a href={hrefFor(l.href)} >{l.label}</a>
                     </li>
                   ))}
                 </ul>
@@ -148,7 +148,7 @@ export default function Footer() {
               <p className="mk-ft-head">Follow</p>
               <div className="mk-ft-socials">
                 {SOCIALS.map((s) => (
-                  <a key={s.name} href={s.href} aria-label={s.name} className="mk-ft-soc">
+                  <a key={s.name} href={s.href} target="_blank" aria-label={s.name} className="mk-ft-soc">
                     {s.icon}
                   </a>
                 ))}
@@ -164,7 +164,7 @@ export default function Footer() {
 
         {/* ---------- bottom bar ---------- */}
         <div className="mk-ft-bar">
-          <p className="mk-ft-copy">© 2025 by Marketics.biz</p>
+          <p className="mk-ft-copy">© 2026 by Marketics.biz</p>
           <a className="mk-ft-toplink" href={onHome ? "#" : "/"}>
             Back to top
             <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
